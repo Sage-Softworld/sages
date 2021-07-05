@@ -1,0 +1,542 @@
+/*--------------------------------------------------------------------- 
+This File Name: style.css 
+---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- 
+import Fonts -
+--------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&display=swap');
+
+/*****---------------------------------------- 1) 
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- 
+import Files 
+---------------------------------------------------------------------*/
+
+@import url(normalize.css);
+@import url(icomoon.css);
+@import url(font-awesome.min.css);
+@import url(nice-select.css);
+
+
+/*GLOBAL STYLES*/
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+	font-family:arial;
+	background:#000;
+	color:#fff;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.;
+    font-weight: normal;
+}
+img{
+	width:100%;
+}
+video{
+	width:100%;
+}
+h1, h2, h3, h4, h5, h6{
+	text-transform:capitalize;
+	margin-bottom:10px;
+	text-align:center;
+}
+p{
+    text-align:justify;
+    font-size:1.1em;
+}
+.btn{
+	text-transform:capitalize;
+	text-decoration:none;
+	display:inline-block;
+	background:#fff;
+	color:#000;
+	font-size:1.1em;
+	font-weight:bold;
+	padding:10px;
+	border-radius:5px;
+	margin:20px auto;
+	transition: all .3s ease-in-out;
+}
+.btn:hover{
+    background:#ccc;
+}
+.highlight{
+	font-weight:bold;
+}
+.head{
+	text-align:center;
+	padding:10px;
+	text-transform:capitalize;
+}
+.head h2{
+	font-size:2em;
+	display:inline-block;
+}
+.container{
+	width:80%;
+	margin:0 auto;
+	text-align:center;
+}
+section{
+	padding:50px 0;
+}
+.current{
+	border-bottom:2px solid #000;
+}
+/*END OF GLOBAL STYLES*/
+
+
+/*HEADER AREA*/
+header{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	padding:20px 60px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	background:#fff;
+	color:#000;
+	z-index:1000;
+	box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+header .logo{
+	display:inline-block;
+	font-size:1.2em;
+	text-transform:capitalize;
+	text-decoration:none;
+	color:#000;
+	font-weight:bold;
+}
+header .navigation{
+	display:flex;
+}
+header .navigation li{
+	list-style:none;
+	margin-left:10px;
+}
+header .navigation li a{
+	text-decoration:none;
+	text-transform:capitalize;
+	font-size:1.1em;
+	font-weight:500;
+	color:#000;
+	padding:5px;
+	display:inline-block;
+	width:100%;
+}
+header .navigation li a:hover{
+	color:#000;
+	border-bottom:2px solid #000;
+
+}
+/*END OF HEADER SECTION*/
+
+
+/*SHOWCASE AREA*/
+#showcase{
+	position:relative;
+	width:100%;
+	height:100vh;
+	background:url("images/bg.jpg");
+	display:grid;
+	justify-content:center;
+	align-items:center;
+	z-index:100;
+}
+#showcase:before{
+	content:"";
+	position:absolute;
+	width:100%;
+	height:100vh;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+	z-index:-1;
+}
+.showcase h1{
+	font-size:2.5em;
+}
+.showcase p{
+	font-size:1.5em;
+	text-align:center;
+}
+.showcase a{
+	margin:15px 5px;
+	transition:.2s;
+	border:2px solid #fff;
+	background:transparent;
+	color:#fff;
+	transition: all .3s ease-in-out;
+}
+.showcase a:hover{
+    background:#fff;
+    color:#000;
+}
+
+
+/*END OF SHOWCASE SECTION*/
+
+
+/*ABOUT AREA*/
+.about{
+	display:grid;
+	grid-template-columns:repeat(2, 1fr);
+	grid-gap:20px;
+	justify-content:center;
+	align-items:center;
+	margin-top:50px;
+}
+.about-image img{
+	width:80%;
+}
+.about-text p{
+	font-size:1.1em;
+}
+/*END OF ABOUT SECTION*/
+
+
+/*SCHEMES AREA*/
+#schemes{
+    text-align:center;
+    padding-right:30px;
+    padding-left:30px;
+}
+.schemes{
+	display:grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-gap:10px;
+	justify-content:center;
+	align-items:center;
+}
+.schemes .box{
+	display:block;
+	padding:0;
+}
+.schemes .box h3{
+	padding:10px;
+	margin:0;
+	font-size:1.3em;
+}
+/*END OF SCHEMES SECTION*/
+
+
+/*PARTNERS AREA*/
+.partners{
+	display:grid;
+	grid-template-columns:repeat(6,1fr);
+}
+/*END OF PARTNERS SECTION*/
+
+
+/*TESTIMONIALS AREA*/
+.testimonials{
+	display:grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-gap:20px;
+	justify-content:center;
+	align-items:center;
+}
+.testimonials .box{
+	box-shadow:inset 0 0 10px #ccc;
+	padding:20px 20px 10px;
+}
+/*END OF TESTIMONIALS SECTION*/
+
+
+/*PROJECTS AREA*/
+.projects{
+	display:grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-gap:20px;
+	justify-content:center;
+	align-items:center;
+}
+/*END OF TESTIMONIALS SECTION*/
+
+
+/*NEWSLETTER*/
+
+.newsletter{
+	padding:20px;
+}
+.newsletter form{
+	display:grid;
+	grid-template-columns:3fr 1fr 1fr;
+	grid-gap:5px;
+}
+.newsletter form input{
+	height:45px;
+	outline:none;
+	font-size:1.2em;
+	padding:10px;
+	text-transform:capitalize;
+}
+.newsletter form input:first-child{
+	
+}
+.newsletter form input:last-child{
+	padding:2px;
+	background:#fff;
+	color:#000;
+	border:none;
+	padding:10px;
+	font-weight:bold;
+	text-transform:capitalize;
+	border-radius:0 10px 10px 0;
+	transition: all .3s ease-in-out;
+}
+.newsletter form input:last-child:hover{
+	background:#ccc;
+}
+/*END OF NEWSLETTER*/
+
+
+/*FOOTER*/
+footer{
+	background:#fff;
+}
+footer p{
+	font-size:1.1em;
+	color:#000;
+	padding:10px;
+	text-align:center;
+	text-transform:capitalize;
+}
+footer a{
+	font-size:1.1em;
+	color:#000;
+	font-weight:500;
+}
+/*END OF HOMEPAGE STYLES*/
+
+
+/*END OF DESKTOP STYLING OF HOMEPAGE*/
+
+
+
+
+/*ABOUT PAGE STYLING*/
+#showcase-page{
+	border-bottom:2px solid #fff;
+}
+.showcase-page{
+	width:100%;
+	height:50vh;
+	display:grid;
+	justify-content:center;
+	align-items:center;
+}
+.showcase-page h1{
+	font-size:2em;
+}
+.about-us, .purpose{
+	display:grid;
+	grid-template-columns:repeat(2, 1fr);
+	grid-gap:20px;
+}
+.achievements{
+	display:grid;
+	grid-template-columns:repeat(4, 1fr);
+	grid-gap:20px;
+}
+.achievements .box{
+	box-shadow:0 0 5px #333;
+	padding:10px 20px;
+	font-size:1.5em;
+	font-weight:550;
+	text-transform:capitalize;
+}
+.achievements .box h2{
+    color:#fff;
+    font-size:2em;
+}
+.achievements .box h3{
+	font-size:1em;
+	color:#ccc;
+}
+/*END OF ABOUT PAGE STYLING*/
+
+
+/*SCHEMES PAGE STYLING*/
+#schemes-page .schemes{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+}
+
+#schemes-page .schemes h4{
+    font-size:1.2em;
+}
+/*END OF SCHEMES PAGE STYLING*/
+
+
+/*GALLERY PAGE STYLING*/
+.gallery-page{
+	display:grid;
+	grid-template-columns:repeat(3, 1fr);
+	grid-gap:20px;
+}
+/*END OF GALLERY PAGE STYLING*/
+
+
+/*CONTACT PAGE*/
+.contact{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	justify-content:center;
+	align-items:start;
+	text-align:center;
+	grid-gap:10px;
+}
+.borderBt{
+    border:2px solid #fff;
+}
+.contactInfo .info{
+	padding:10px;
+	margin-bottom:10px;
+	box-shadow:0 0 3px rgba(0,0,0,0.3);
+}
+.contactInfo .info h4{
+	padding:10px;
+	text-transform:capitalize;
+}
+.contactInfo .info a{
+	position:relative;
+	color:#fff;
+	padding:10px;
+	text-decoration:none;
+	transition: all .3s ease-in-out;
+}
+.contactInfo .info a img{
+	width:30px;
+	position:relative;
+	top:10px;
+}
+.contactForm{
+	padding:10px;
+}
+.contactForm h3{
+	text-transform:capitalize;
+	padding:10px;
+}
+.contactForm form{
+	display:grid;
+	grid-gap:5px;
+}
+.contactForm form input,.contactForm form textarea{
+	padding:5px 10px;
+	font-size:1.2em;
+	text-transform:capitalize;
+}
+.contactForm form textarea{
+	height:100px;
+	resize:none;
+}
+.contactForm form input:last-child{
+	color:#000;
+	background:#fff;
+	padding:10px;
+	border:none;
+	border-radius:0 0 10px 10px;
+	transition: all .3s ease-in-out;
+}
+.contactForm form input:last-child:hover{
+	background:#ccc;
+}
+/*END OF CONTACT PAGE STYLING*/
+
+
+/*END OF DESKTOP STYLING FOR THE COMPLETE WEBSITE*/
+
+
+
+
+/*MEDIA QUERY FOR SCREEN LESS THAN 768PX*/
+@media (max-width:768px){
+
+	header{
+		padding:10px 20px;
+	}
+	.current{
+		border:none;
+	}
+	.toggler{
+		width:45px;
+		height:45px;
+		padding-top:3px;
+	}
+	.toggler span{
+		background:#000;
+		display:grid;
+		margin:8px;
+		padding:1px;
+	}
+	header .navigation{
+		position:absolute;
+		top:65px;
+		left:-100%;
+		width:100%;
+		text-align:center;
+		display:grid;
+		transition:all .3s ease-in-out;
+	}
+	header .navigation.active{
+		left:0;
+		background:#000;
+	}
+	header .navigation.active li{
+		padding:0;
+		margin:0;
+		display:block;
+		width:100%;
+	}
+	header .navigation.active li a{
+	color:#fff;
+	padding:15px;
+	font-size:1.2em;
+	}
+	header .navigation.active li a:hover{
+		color:#000;
+		background:#fff;
+		border:none;
+	}
+
+.showcase p{
+	font-size:1.1em;
+}
+	.about, .schemes, .testimonials, .projects, .newsletter form, .contact{
+	grid-template-columns:1fr;
+	}
+	.partners{
+	grid-template-columns:repeat(3,1fr);
+}
+.about-us, .purpose, .achievements{
+	grid-template-columns:1fr;
+	}
+	.contact-page{
+	    grid-template-columns:1fr;
+	}
+	.newsletter form input:last-child{
+	border-radius:0 0 10px 10px;
+}
+.gallery-page{
+	grid-template-columns:repeat(2, 1fr);
+	}
+
+}
